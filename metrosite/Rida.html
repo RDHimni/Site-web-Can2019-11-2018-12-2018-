@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    
+    <link href="css/metro-all.css" rel="stylesheet"> 
+    <link href="css/metro.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <style type="text/css">
+    iframe{
+      /*display: none;*/
+      width: 100%;
+      height: 70%;
+      
+    }
+    #divmap{
+      position: absolute;
+      top: 0px;     
+      left: 0px;
+      right: 0px;
+      height:100%;
+      text-align: center;
+      display: none;
+      background-color: RGB(0,0,0,0.82);
+      z-index: 1;
+      
+     
+
+    }
+    #dwst{
+      position: relative;
+      width: 100%;
+      height: 80%;
+      top: 10%;
+      
+      
+      
+    }
+    #bfermezmap{
+      float: right;
+      width: 30px;
+            height: 30px;
+            background: #3b3b46;
+            text-align: center;
+            line-height: 30px;
+            font-size: 25px;
+            color: red;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+
+    }
+    #bfermezmap:hover{
+      background: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript">
+    function map(src) {
+      document.getElementById("map").src = src;
+      document.getElementById("divmap").style.display = "block";
+      
+    }
+
+    function fermezmap(){
+               document.getElementById("divmap").style.display = "none";
+    }
+  </script>
+
+      <style type="text/css">
+    iframe{
+      /*display: none;*/
+      width: 100%;
+      height: 70%;
+      
+    }
+    #divmap2{
+      position: absolute;
+      top: 0px;     
+      left: 0px;
+      right: 0px;
+      height:100%;
+      text-align: center;
+      display: none;
+      background-color: RGB(0,0,0,0.82);
+      z-index: 1;
+      
+     
+
+    }
+    #dwst2{
+      position: relative;
+      width: 100%;
+      height: 80%;
+      top: 10%;
+      
+      
+      
+    }
+    #bfermezmap2{
+      float: right;
+      width: 30px;
+            height: 30px;
+            background: #3b3b46;
+            text-align: center;
+            line-height: 30px;
+            font-size: 25px;
+            color: red;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+
+    }
+    #bfermezmap2:hover{
+      background: #fff;
+      cursor: pointer;
+    }
+  </style>
+  <script type="text/javascript">
+    function map2(src) {
+      document.getElementById("map2").src = src;
+      document.getElementById("divmap2").style.display = "block";
+      
+    }
+
+    function fermezmap2(){
+               document.getElementById("divmap2").style.display = "none";
+    }
+  </script>
+   
+	<title>CAN-MARCO</title>
+</head>
+
+<body style="padding-top: 50px">
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<script type="text/javascript">
+	function menucolor(color){
+		 document.getElementById("menu").style.background = color;
+		  document.getElementById("nav").style.background = color;
+	}
+</script>
+
+<section   class="container-fluid fg-white pos-fixed fixed-top z-top"> 
+
+  <header id="menu">
+     <div class="logo">CAN-2019-MAROC</div>
+        <nav id="nav">
+
+            <ul>
+               
+                <li><a href="#" class="text-bold fg-yellow active" onclick='menucolor("#0a460c")'><span class="d-block ani-vertical">Accueil</span></a></li>
+                <li><a href="#Quoi" class="text-bold fg-yellow" onclick='menucolor("#af142d")'><span class="d-block ani-vertical">Quoi</span></a></li>
+                <li><a href="#Stades" class="text-bold fg-yellow" onclick='menucolor("#434363")'><span class="d-block ani-vertical">Stades</span></a></li>
+                <li><a href="#Hotels" class="text-bold fg-yellow" onclick='menucolor("#af142d")'><span class="d-block ani-vertical">Hotels</span></a></li>
+                <li><a href="#support" class="text-bold fg-yellow" onclick='menucolor("#af142d")'><span class="d-block ani-vertical">Support</span></a></li>
+                <li><a href="#contact" class="text-bold fg-yellow" onclick='menucolor("#af142d")'><span class="d-block ani-vertical">Contact</span></a></li>
+
+           </ul>
+        
+         </nav>
+         <div class="menu-toggle">
+            <i class="fa fa-bars menu" airia-hidden="true"></i>
+         </div>
+  </header>
+  
+  <script src="js/jquery-3.3.1.js"></script>
+
+  <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-toggle').click(function(){
+                $('nav').toggleClass('active');
+            })
+        })
+        
+    </script> 
+</section>
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+
+<section id="hero" class="hero rida-bg text-center neb neb-rida">
+
+        <div class="mt-10"></div>
+ 
+   <section class="container-fluid  fg-dark pt-10 pb-20  " >
+         <div class="container text-center">
+
+               <div class="feature-table row mt-10 pos-absolute-md">
+                 <div class="cell-md-4">
+                     <div class="info-panel rounded no-overflow shadow-3" >
+                         <div class="info-panel-header fg-green" style="background-color:#0a460c; " >Maroc</div>
+                         <img src="image/52555607coupe-afrique-des-nations-jpg.jpg" class="log">
+                        
+                    </div> 
+                </div> 
+                <div class="cell-md-4 " > 
+                     <div class="info-panel rounded no-overflow shadow-3" >
+                         <div class="info-panel-header fg-green" style="background-color:#0a460c; 
+                         " >Maroc</div>
+                         <img  src="image/ten.gif" class="log">
+                        
+                    </div> 
+                </div> 
+               <div class="cell-md-4">
+                     <div class="info-panel rounded no-overflow shadow-3" >
+                         <div class="info-panel-header fg-green" style="background:#0a460c; " >Maroc</div>
+                         <img  src="image/Da-_c5ZX0AACwnh.png" class="log">
+                        
+                    </div> 
+                </div> 
+            </div>
+
+        </div>
+ </section>
+
+</section>
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<section id="Quoi" class="container-fluid bg-light pt-10 pb-20 neb neb-light"> 
+        <div class="container text-center">
+            <div class="h1 m-10"><span class="reduce-1 enlarge-1-md">Quoi?</span></div>
+            <div class="text-leader">
+                <p class="reduce-1 enlarge-1-md pl-5-fs pr-5-fs pl-20-md pr-20-md">
+                   CAN 2019 : le Maroc favori pour remplacer le Cameroun au pied levé
+                </p>
+            </div>
+            <hr class="mt-10 mb-10 w-50" style="background-color: #E1E1E1">
+        
+            <div class="example p-0 no-border"></div>
+            <hr class="mt-10 mb-10 w-50" style="background-color: #E1E1E1">
+            <div class="text-leader2">
+                <p class="reduce-1 enlarge-1-md pl-5-fs pr-5-fs pl-20-md pr-20-md">
+                                 le Maroc envisage de remporter sa candidature pour la cup d'afrique.
+                </p>
+            </div>
+            <hr class="mt-10 mb-10 w-50" style="background-color: #E1E1E1">
+            <div class="example p-0 no-border"></div>
+            <hr class="mt-10 mb-10 w-50" style="background-color: #E1E1E1">
+            <div class="text-leader2">
+                <p class="reduce-1 enlarge-1-md pl-5-fs pr-5-fs pl-20-md pr-20-md">
+                   Après le retrait de l’organisation de la Coupe d’Afrique des nations au pays de Paul Biya, la Confédération africaine de football cherche un plan de secours.
+                </p>
+            </div>
+        </div>
+        
+</section>
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- <link rel="stylesheet" type="text/css" href="caroucyle/swiper.min.css">  -->  
+ <section id="Stades" class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(image/stades/1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/4.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/7.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/8.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/9.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/stades/10.jpg)"></div>
+    </div>
+
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</section>
+
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+  <!-- <button onclick='map()'>localisez</button> -->
+
+
+
+<!-- <section class="container-fluid hero-bg pt-10 pb-20 neb neb-hero"> 
+        <div class="container text-center">
+            <div class="h1 m-10"><span class="reduce-1 enlarge-1-md">BBBBBBBBB</span></div>
+
+        </div>
+        
+</section> -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////-->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<section class="container-fluid dhimni-bg pt-10 pb-20 neb neb-dhimni">
+        <div class="container text-center">
+            <div class="h1 mt-10"><span class="reduce-1 enlarge-1-md fg-yellow d-block ani-vertical">SDATES</span></div>
+            <div class="h4 text-light"><span class="reduce-1 enlarge-1-md fg-white"> Cliquez sur l'image pour les informations</span></div>
+
+            <div class="row mt-12">
+                <div class="cell-md-4 mt-4">
+                  
+                    <div class="img-container img-thumbnail">
+                    <img src="image/stades/9.jpg">
+                    <div class="image-overlay">
+                    
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Grand stade</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 240 places assises</br> dont 36 300 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">MARRAKECH</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                   </br>
+                    <img class="disc" src="image/Map.png" onclick='map("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.357132915953!2d-8.025655785491212!3d31.651447681326427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafec203850adaf%3A0xaef1a65201b7ef8d!2sStadium+Okiod+football!5e0!3m2!1sen!2sma!4v1547513693172")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                    
+                </div>
+                <div class="cell-md-4 mt-4">
+                    <div class="img-container img-thumbnail">
+                    <img src="image/stades/1.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Grand stade</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 000 places assises</br> dont 36 000 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">AGADYRE</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.3046318904403!2d-9.542466885529187!3d30.427465081744565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c9de97587637%3A0x9668ab97f677bc8e!2sAdrar+Stadium!5e0!3m2!1sen!2sma!4v1547513981228")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                    
+                </div>
+                <div class="cell-md-4 mt-4">
+                    
+                    <div class="img-container img-thumbnail">
+                    <img src="image/stades/2.jpg"">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Ibn Battota</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 240 places assises</br> dont 36 300 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">TANGY</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.3947849925075!2d-5.860213585252052!3d35.74110023429457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b87a7b9e9b7e5%3A0xad9add5f6dc2c4c8!2sStade+Ibn+Batouta!5e0!3m2!1sen!2sma!4v1547514264658")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                    
+            </div>
+
+            <div class="row mt-12">
+                <div class="cell-md-4 mt-4">
+
+                     <div class="img-container img-thumbnail">
+                    <img src="image/stades/7.jpg"">
+                   <div class="image-overlay">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Grand stade</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 240 places assises</br> dont 36 300 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">FES</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map()'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                   </div> 
+                <div class="cell-md-4 mt-4">
+                  
+
+                    <div class="img-container img-thumbnail">
+                    <img src="image/stades/4.jpg"">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Molay abdllah</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 240 places assises</br> dont 36 300 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">RABAT</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.288581203106!2d-6.8922136853033305!3d33.959421430064275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76d33381e1715%3A0xa48e7a4d205b07f1!2sComplexe+Sportif+Prince+Moulay+Abdellah!5e0!3m2!1sen!2sma!4v1547503264158")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                    
+                </div>
+                <div class="cell-md-4 mt-4">                   
+
+                    <div class="img-container img-thumbnail">
+                    <img src="image/stades/8.jpg"">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">Sanyt rmal</h4>
+                    </div>
+                      <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<p style="color: yellow">45 240 places assises</br> dont 36 300 couvertes</h4>
+                    </div>
+                     
+                    </div>
+                    </div>
+                    <h4 class="fg-white mt-4">TETOIN</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map()'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="divmap" class ="container-fluid" >
+           <spam id="bfermezmap" onclick='fermezmap()'>X</spam>
+           <div id="dwst">
+  
+              <iframe id="map" src="" ></iframe>
+           </div>
+       </div>
+</section>
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- <link rel="stylesheet" type="text/css" href="caroucyle/swiper.min.css">  -->  
+<section id="Hotels" class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(image/hoteles/0.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/1.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/2.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/3.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/4.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/5.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/6.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(image/hoteles/7.jpg)"></div>
+
+    </div>
+
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</section>
+
+
+
+ 
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////////////////////////////-->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<section class="container-fluid hero-bg pt-10 pb-20 neb neb-hero">
+        <div class="container text-center">
+            <div class="h1 mt-10"><span class="reduce-1 enlarge-1-md fg-yellow d-block ani-vertical">HOTELS</span></div>
+            <div class="h4 text-light"><span class="reduce-1 enlarge-1-md fg-white"> Cliquez sur l'image pour visitez le site officielle de hotel</span></div>
+
+            <div class="row mt-12">
+                <div class="cell-md-4 mt-4">
+                  
+                 <a href="https://www.booking.com/searchresults.en-gb.html?aid=311984;label=ha-tel-tanjah-flandria-tLGamxLpe2S67AkLmx96IQS162169096467%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atikwd-11888202927%3Alp1009985%3Ali%3Adec%3Adm;sid=c7e021e5d14774add57cc8a7897897c8;city=-51554;expand_sb=1;highlighted_hotels=709597;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&gclid=Cj0KCQiAg_HhBRDNARIsAGHLV53G4Ih3a5b2778PSyIZEx3IcC_-mPYCMT7iqB5Uqm1FDk3By6x9U3EaAunNEALw_wcB&" target="_blank">
+                 <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/0.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/etoile2.png"></div>
+                        <hr class="w-50" style="background-color: #000">
+                        <div class="blocketoile">
+                    	<h4 style="color: yellow">ALMAMONIA</h4>
+                        </div>
+                    </div>
+                   </div></a>
+                    <h4 class="fg-white mt-4">MARRAKECH</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 450 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.528014041363!2d-8.021271785491344!3d31.64677098132792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee9c34e2d937%3A0x24e8f8769e2334!2sH%C3%B4tel+Marrakech+le+Tichka!5e0!3m2!1sen!2sma!4v1547515358694")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+
+                </div>
+                <div class="cell-md-4 mt-4">
+                	<a href="https://explore.hilton.com/landing/?location=35.773267%2C-5.7886627&radius=15&title=Tangier%2C_Morocco&tracking=OM%2CMB%2CDLP_EMEAx&campaign_id=Default&WT_srch=1&WT_mc_id=zIMDPDA0EMEA1MB2PSH3PPC_Google_search4cid827545083_aid44069695578_me_kkwd-3033528193985Generic_Cluster6MULTIBR7en&utm_source=Google&utm_medium=ppc&utm_campaign=paidsearch&campaignid=827545083&adgroupid=44069695578&targetid=kwd-303352819398" target="_blank">
+                    <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/1.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/etoile2.png">
+                        <img class="etoile" src="image/etoile2.png"></div>
+                    <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">HILTON</h4>
+                        </div>
+                    </div>
+                    </div></a>
+                    <h4 class="fg-white mt-4">TANGY</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 400 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8334152322395!2d-5.810863685353244!3d35.77946818017147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f56a3d5eb19%3A0x7649ccd130943a9a!2sTanjah+Flandria!5e0!3m2!1sen!2sma!4v1547515695068")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                </div>
+                <div class="cell-md-4 mt-4">
+                    <a href="">
+                    <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/2.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png"></div>
+                     <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">ROYAL</h4>
+                        </div>
+                    </div>
+                    </div></a>
+                    <h4 class="fg-white mt-4">CASABLANCA</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 400 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8334152322395!2d-5.810863685353244!3d35.77946818017147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f56a3d5eb19%3A0x7649ccd130943a9a!2sTanjah+Flandria!5e0!3m2!1sen!2sma!4v1547515695068")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+            </div>
+
+            <div class="row mt-12">
+                <div class="cell-md-4 mt-4">
+                     <a href="">
+                     <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/3.jpg">
+                   <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png"></div>
+                    <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">HAWAY</h4>
+                        </div>
+                    </div>
+                    </div></a>
+                    <h4 class="fg-white mt-4">FES</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 350 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8334152322395!2d-5.810863685353244!3d35.77946818017147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f56a3d5eb19%3A0x7649ccd130943a9a!2sTanjah+Flandria!5e0!3m2!1sen!2sma!4v1547515695068")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                </div>
+                <div class="cell-md-4 mt-4">
+                  
+                    <a href="">
+                    <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/4.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png"></div>
+                    <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">PARADYSE</h4>
+                        </div>
+                    </div>
+                    </div></a>
+                    <h4 class="fg-white mt-4">TETOINE</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 350 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8334152322395!2d-5.810863685353244!3d35.77946818017147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f56a3d5eb19%3A0x7649ccd130943a9a!2sTanjah+Flandria!5e0!3m2!1sen!2sma!4v1547515695068")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                </div>
+                <div class="cell-md-4 mt-4">                   
+                    <a href="">
+                    <div class="img-container img-thumbnail">
+                    <img src="image/hoteles/5.jpg">
+                    <div class="image-overlay">
+                    <div class="blocketoile">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/étoile.png">
+                        <img class="etoile" src="image/etoile2.png">
+                        <img class="etoile" src="image/etoile2.png"></div>
+                    <hr class="w-50" style="background-color: #000">
+                    <div class="blocketoile">
+                    	<h4 style="color: yellow">FARAH</h4>
+                        </div>
+                    </div>
+                    </div></a>
+                    <h4 class="fg-white mt-4">RABAT</h4>
+
+                    <img class="disc" src="image/airplane.png">
+                    <p style="display: inline;">
+                         : Royal Air Maroc
+                    </p>
+                    </br>
+                    <img class="disc" src="image/money.png">
+                    <p style="display: inline;">
+                         : 300 DH / nuit
+                    </p>
+                    </br>
+                    <img class="disc" src="image/Map.png" onclick='map2("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.8334152322395!2d-5.810863685353244!3d35.77946818017147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f56a3d5eb19%3A0x7649ccd130943a9a!2sTanjah+Flandria!5e0!3m2!1sen!2sma!4v1547515695068")'>
+                    <p style="display: inline;">
+                         : Localiser
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="divmap2" class ="container-fluid" >
+           <spam id="bfermezmap2" onclick='fermezmap2()'>X</spam>
+           <div id="dwst2">
+  
+              <iframe id="map2" src="" ></iframe>
+           </div>
+       </div>
+</section>
+
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<section id="support" class="container-fluid bg-white fg-dark">
+        <div class="container pt-10 pb-20">
+            <div class="h1 mt-10 text-center"><span class="reduce-1 enlarge-1-md">La culture marocaine</span></div>
+            <p class="text-leader text-center pl-10-md pr-10-md">
+               La société marocaine est issue d'une tradition agropastorale, où l’honnêteté est placée au rang de vertu. Les Marocains entretiennent un rapport étroit au sacré, ils aiment le travail bien fait et sont de fins négociateurs. Au Maroc l’hospitalité est un devoir, mais l’Amazigh peut devenir un farouche guerrier lorsqu'il s'agit de protéger ses richesses ou de garantir la solidarité au sein de son groupe. Riche d'une histoire millénaire, le Maroc a toujours su profiter des apports des sociétés qu'il a côtoyées et les absorber. La mondialisation, la migration, l'évolution du monde contemporain projettent la société marocaine vers de nouveaux horizons où se côtoient tradition et modernité.
+            </p>
+<!-- 
+            <div class="h3 text-light mt-10 text-center"><span class="reduce-1 enlarge-1-md">bla bla bla bla bla bla bla bla bl!</span></div> -->
+
+            <hr class="mt-10">
+            
+            <div class="example p-0 no-border"></div>
+            <hr class="mt-10">
+
+            <div class="h2 mt-20 text-center"><span class="reduce-1 enlarge-1-md">Special thanks to</span></div>
+
+            <div class="row special-thanks">
+                <div class="cell-md-2">
+                    <img src="image/images.jpg"></a>
+                </div>
+                <div class="cell-md-2">
+                    <img src="image/Maroc_Telecom_Logo.png"></a>
+                </div>
+                <div class="cell-md-2">
+                    <img src="image/orange-logo-vector.png"></a>
+                </div>
+                <div class="cell-md-2">
+                    <img src="image/Logo_RoyalAirMaroc.png"></a>
+                </div>
+                <div class="cell-md-2">
+                    <img src="image/Da-_c5ZX0AACwnh.png"></a>
+                </div>
+            </div>
+        </div>
+</section> 
+ 
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////// -->
+
+<footer id="contact" class="footer-bg">
+        <div class="container pt-20 pb-20">
+        
+           <div class="text-center reduce-1">
+           	   <ul>
+                     <li><a href="" style="background: #3b5998;"><i class="fa fa-facebook menu" airia-hidden="true"></i></a></li>
+                     <li><a href="" style="background: #1abc9c;"><i class="fa fa-twitter menu" airia-hidden="true"></i></a></li>
+                     <li><a href="" style="background: #f44336;"><i class="fa fa-google-plus menu" airia-hidden="true"></i></a></li>
+                     <li><a href="" style="background: #9c27b0;"><i class="fa fa-instagram menu" airia-hidden="true"></i></a></li>
+                </ul>
+                <div class="text-center mt-10 reduce-1">
+                <p>Copyright &copy; 2018 Rida Dhimni - Toute reproduction interdite.</p>
+                </div>
+            </div>
+        </div>
+</footer>
+</body>
+</html>
